@@ -110,6 +110,6 @@ app.get('*',(req,res)=>{
     //res.send("my 404 page")
 })
 
-app.listen(3000,()=>{
-    console.log('server is on port'+3000)
+app.listen(port,()=>{
+    console.log('server is on port'+port)
 })

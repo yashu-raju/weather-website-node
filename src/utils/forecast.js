@@ -22,7 +22,7 @@ const forecast=((latitude,longitude,callback)=>{
             callback('unable to find location',undefined)
         }else{
             
-            callback(undefined,`It is currently ${current.temperature} degrees out, There is ${current.weather_descriptions[0]} humidity out there` ) 
+            callback(undefined,`You are in ${response.body.location.lat} latitude and ${response.body.location.lon} longitude, local-time is ${response.body.location.localtime}, temperature: ${current.temperature} degrees,  humidity: ${current.humidity}` ) 
     }  
         
    
