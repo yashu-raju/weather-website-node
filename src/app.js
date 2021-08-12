@@ -23,6 +23,7 @@ const app=express()
 const publicDirPath=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../templates/views')
 const partialsPath=path.join(__dirname,'../templates/partials')
+const port=process.env.PORT||3000
 
 //ste up handlebars engine and view location
 app.set('view engine','hbs')
@@ -109,6 +110,6 @@ app.get('*',(req,res)=>{
     //res.send("my 404 page")
 })
 
-app.listen(3000,()=>{
-    console.log('server is on port 3000!')
+app.listen(port,()=>{
+    console.log('server is on port'+port)
 })
